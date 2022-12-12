@@ -1,0 +1,33 @@
+<%- include('../includes/head.ejs') %>
+    <link rel="stylesheet" href="/css/endpoint.css">
+</head>
+
+<body>
+    <%- include('../includes/navigation.ejs') %>
+
+    <main>
+        <% if (ends.length > 0) { %>
+            <div class="grid">
+                <% for (let endpoint of ends) { %>
+                    <article class="card endpoint-item">
+                        <header class="card__header">
+                            <h1 class="endpoint__title"><%= endpoint.name %></h1>
+                        </header>
+                        <div class="card__content">
+                            <p class="endpoint__description"><%= endpoint.description %></p>
+                        </div>
+                        <div class="card__actions">
+                                <a href="/endpoints/<%= endpoint._id %>" class="btn">Details</a>
+                                <form action="/delete-endpoint" method="POST">
+                                    <input type="hidden" value="<%= endpoint._id %>" name="endpointId">
+                                    <button class="btn" type="submit">Delete</button>
+                                </form>
+                        </div>
+                    </article>
+                <% } %>
+            </div>
+        <% } else { %>
+            <h1>No Endpoints Found!</h1>
+        <% } %>
+    </main>
+<%- include('../includes/end.ejs') %>

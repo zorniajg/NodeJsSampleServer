@@ -1,0 +1,32 @@
+<%- include('../includes/head.ejs') %>
+    </head>
+
+    <body>
+        <%- include('../includes/navigation.ejs') %>
+        <main class="centered">
+            <h1><%= endpoint.name %></h1>
+            <% if (data.length > 0) { %>
+                <div class="grid">
+                    <% for (let d of data) { %>
+                        <article class="card endpoint-item">
+                            <header class="card__header">
+                                <!-- <h1 class="endpoint__title">
+                                    <%= endpoint.name %>
+                                </h1> -->
+                            </header>
+                            <div class="card__content">
+                                <h2 class="endpoint__price">Value: 
+                                    <%= d.value %>
+                                </h2>
+                                <p class="endpoint__description">
+                                    <%= d.date %>
+                                </p>
+                            </div>
+                        </article>
+                        <% } %>
+                </div>
+                <% } else { %>
+                    <h1>No Endpoints Found!</h1>
+                    <% } %>
+        </main>
+        <%- include('../includes/end.ejs') %>

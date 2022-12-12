@@ -1,0 +1,27 @@
+.endpoint-form {
+    width: 20rem;
+    max-width: 90%;
+    margin: auto;
+    display: block;
+}
+
+.endpoint-item {
+    width: 20rem;
+    max-width: 95%;
+    margin: 1rem;
+}
+
+.endpoint__title {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.endpoint__price {
+    text-align: center;
+    color: #4d4d4d;
+    margin-bottom: 0.5rem;
+}
+
+.endpoint__description {
+    text-align: center;
+}

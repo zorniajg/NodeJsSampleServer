@@ -1,0 +1,32 @@
+{
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "chai": "^4.3.7",
+    "commander": "^9.4.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "mongodb": "^4.12.1",
+    "mongoose": "^6.8.0",
+    "sinon": "^15.0.0"
+  },
+  "name": "nodejssampleserver",
+  "description": "NodeJs Sample Server for IOT Endpoints",
+  "version": "1.0.0",
+  "main": "app.js",
+  "devDependencies": {
+    "mocha": "^10.1.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zorniajg/NodeJsSampleServer.git"
+  },
+  "author": "Jacob Zorniak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zorniajg/NodeJsSampleServer/issues"
+  },
+  "homepage": "https://github.com/zorniajg/NodeJsSampleServer#readme"
+}
